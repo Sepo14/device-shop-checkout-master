@@ -1,110 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      href="resources/favicon.ico"
-      type="image/x-icon"
-      sizes="96x96"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Device Shop Checkout | devChallenges.io</title>
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Device Shop Checkout | devChallenges.io</title>
 
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  <!--You are welcome to delete these styles or modify them in your own stylesheet -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter';
+      color: #1D1D1F;
+    }
 
-      body {
-        height: 100vh;
-      }
+    body {
+      height: 100vh;
+    }
+  </style>
+</head>
 
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <!--     
-    Checkout
-    
-    3 items
-    
-    iPhone 12 Pro
-    
-    Golden
-    
-    $999.00
-    
-    x 1
-    
-    Apple Watch
-    
-    Blue
-    
-    $399.00
-    
-    iMac
-    
-    Green
-    
-    $1199.00
-    
-    Enter coupon code
-    
-    Apply Coupon
-    
-    Sub total
-    
-    $2597.00
-    
-    Tax
-    
-    $623.28
-    
-    Total
-    
-    $3220.28
-    
-    Contact Information
-    
-    First & Last name
-    
-    Enter first & last name
-    
-    Email Address
-    
-    Enter email address
-    
-    Country
-    
-    Finland
-    
-    Postal Code
-    
-    00270
-    
-    Continue
-     -->
-
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
+<body>
+  <div class="main">
+    <div class="header-carrito">
+      <h2>Checkout</h2>
+      <p class="item-counter">3 ITEMS</p>
     </div>
-  </body>
+    <div class="carrito-box">
+      <div class="cesta-carrito">
+        <div class="item-list">
+          <div class="item">
+            <div class="item-image">
+              <img src="./resources/Gold.png" alt="Device 1" />
+            </div>
+            <div class="item-info">
+              <div class="row-item">
+                <p class="item-name">iPhone 12 Pro</p>
+                <p class="item-price">$999</p>
+              </div>
+              <p class="item-model">Golden</p>
+              <div class="row-item">
+                <p class="item-amount">x 1</p>
+                <img src="./resources/close-icon.svg" alt="close">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="./resources/Apple-watch.png" alt="Device 1" />
+            </div>
+            <div class="item-info">
+              <div class="row-item">
+                <p class="item-name">Apple Watch</p>
+                <p class="item-price">$399</p>
+              </div>
+              <p class="item-model">Blue</p>
+              <div class="row-item">
+                <p class="item-amount">x 1</p>
+                <img src="./resources/close-icon.svg" alt="close">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="./resources/iMac.png" alt="Device 1" />
+            </div>
+            <div class="item-info">
+              <div class="row-item">
+                <p class="item-name">iMac</p>
+                <p class="item-price">$1199</p>
+              </div>
+              <p class="item-model">Golden</p>
+              <div class="row-item">
+                <p class="item-amount">x 1</p>
+                <img src="./resources/close-icon.svg" alt="close">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item-details">
+          <div class="coupon-row">
+            <input type="text" placeholder="Coupon Code" />
+            <button class="apply-button">Apply Coupon</button>
+          </div>
+          <div class="subtotal-row">
+            <p class="subtotal-text">Subtotal</p>
+            <p class="subtotal-amount">$2597</p>
+          </div>
+          <div class="tax-row">
+            <p class="tax-text">Tax</p>
+            <p class="tax-amount">$623</p>
+          </div>
+          <div class="total-row">
+            <p class="total-text">Total</p>
+            <p class="total-amount">$3220</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-carrito">
+        <form action="">
+          <label class="header-form">
+            <h3>Contact Information</h3>
+          </label>
+          <label for="name">First & Last Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" />
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" />
+
+          <div class="form-50">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="postal">Postal Code</label>
+              <input type="text" id="postal" name="postal" placeholder="Enter your postal code" />
+            </div>
+          </div>
+
+          <button type="submit" class="pay-button">Continue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
